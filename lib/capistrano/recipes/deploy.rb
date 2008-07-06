@@ -338,7 +338,7 @@ namespace :deploy do
       else raise ArgumentError, "unknown migration target #{migrate_target.inspect}"
       end
 
-    run "cd #{directory}; #{rake} RAILS_ENV=#{rails_env} #{migrate_env} db:migrate"
+    run "cd #{directory}; #{rake} RAILS_ENV=#{migrate_env} db:migrate"
   end
 
   desc <<-DESC
